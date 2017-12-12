@@ -20,5 +20,5 @@
 	branch = master
 [submodule "AuApiUI"]
 	path = AuApiUI
-	url = https://github.com/AddonU/AuHitRange.git
+	url = https://github.com/AddonU/AuApiUI.git
 	branch = master
