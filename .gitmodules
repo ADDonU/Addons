@@ -10,15 +10,7 @@
 	path = AuCoords
 	url = https://github.com/AddonU/AuCoords.git
 	branch = master
-[submodule "AuChatButtons"]
-	path = AuChatButtons
-	url = https://github.com/AddonU/AuChatButtons.git
-	branch = master
 [submodule "AuXtraUI"]
 	path = AuXtraUI
 	url = https://github.com/AddonU/AuXtraUI.git
-	branch = master
-[submodule "AuApiUI"]
-	path = AuApiUI
-	url = https://github.com/AddonU/AuApiUI.git
 	branch = master
