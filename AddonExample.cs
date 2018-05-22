@@ -1,4 +1,4 @@
-﻿﻿// Understanding the Addon System:
+﻿// Understanding the Addon System:
 //
 // 1. partial classes:
 //    The C# compiler will include all 'partial' classes of the same type into
@@ -73,157 +73,176 @@ using UnityEngine.Networking;
 
 // entities ////////////////////////////////////////////////////////////////////
 public partial class Player {
-	//[SyncVar] int test;
+    //[SyncVar] int test;
 
-	public partial class PlayerLevel {
-	}
+    public partial class PlayerLevel {
+    }
 
-	void Awake_Example() {}
-	void OnStartLocalPlayer_Example() {}
-	void OnStartServer_Example() {}
-	void Start_Example() {}
-	void UpdateClient_Example() {}
-	void LateUpdate_Example() {}
-	void OnDestroy_Example() {}
-	[Server] void DealDamageAt_Example(HashSet<Entity> entities, int amount) {}
-	[Server] void OnDeath_Example() {}
-	[Client] void OnSelect_Example(Entity entity) {}
-	[Server] void OnLevelUp_Example() {}
-	[Server] void OnUseInventoryItem_Example(int index) {}
+    void Awake_Example() {}
+    void OnStartLocalPlayer_Example() {}
+    void OnStartServer_Example() {}
+    void Start_Example() {}
+    void UpdateClient_Example() {}
+    void LateUpdate_Example() {}
+    void OnDestroy_Example() {}
+    [Server] void DealDamageAt_Example(Entity entity, int amount) {}
+    [Server] void OnDeath_Example() {}
+    [Client] void OnSelect_Example(Entity entity) {}
+    [Server] void OnLevelUp_Example() {}
+    [Server] void OnUseInventoryItem_Example(int index) {}
 
-	// you can use the drag and drop system too:
-	void OnDragAndDrop_InventorySlot_ExampleSlot(int[] slotIndices) {}
-	void OnDragAndClear_ExampleSlot(int slotIndex) {}
+    // you can use the drag and drop system too:
+    void OnDragAndDrop_InventorySlot_ExampleSlot(int[] slotIndices) {}
+    void OnDragAndClear_ExampleSlot(int slotIndex) {}
 }
 
 public partial class Monster {
-	void Awake_Example() {}
-	void OnStartServer_Example() {}
-	void Start_Example() {}
-	void UpdateClient_Example() {}
-	void LateUpdate_Example() {}
-	[Server] void OnAggro_Example(Entity entity) {}
-	[Server] void OnDeath_Example() {}
+    void Awake_Example() {}
+    void OnStartServer_Example() {}
+    void Start_Example() {}
+    void UpdateClient_Example() {}
+    void LateUpdate_Example() {}
+    [Server] void OnAggro_Example(Entity entity) {}
+    [Server] void OnDeath_Example() {}
 }
 
 public partial class Npc {
-	void OnStartServer_Example() {}
-	void UpdateClient_Example() {}
+    void OnStartServer_Example() {}
+    void UpdateClient_Example() {}
 }
 
 public partial class Pet {
-	public partial class PetLevel {
-	}
+    public partial class PetLevel {
+    }
 
-	void Awake_Example() {}
-	void OnStartServer_Example() {}
-	void Start_Example() {}
-	void UpdateClient_Example() {}
-	void LateUpdate_Example() {}
-	void OnDestroy_Example() {}
-	[Server] void OnLevelUp_Example() {}
-	[Server] void DealDamageAt_Example(HashSet<Entity> entities, int amount) {}
-	[Server] void OnAggro_Example(Entity entity) {}
-	[Server] void OnDeath_Example() {}
+    void Awake_Example() {}
+    void OnStartServer_Example() {}
+    void Start_Example() {}
+    void UpdateClient_Example() {}
+    void LateUpdate_Example() {}
+    void OnDestroy_Example() {}
+    [Server] void OnLevelUp_Example() {}
+    [Server] void DealDamageAt_Example(Entity entity, int amount) {}
+    [Server] void OnAggro_Example(Entity entity) {}
+    [Server] void OnDeath_Example() {}
 }
 
 public partial class Entity {
-	void Awake_Example() {}
-	void OnStartServer_Example() {}
-	void Update_Example() {}
-	[Server] void DealDamageAt_Example(HashSet<Entity> entities, int amount) {}
+    void Awake_Example() {}
+    void OnStartServer_Example() {}
+    void Update_Example() {}
+    [Server] void DealDamageAt_Example(Entity entity, int amount) {}
+    [Server] void OnDeath_Example() {}
 }
 
 // items ///////////////////////////////////////////////////////////////////////
 public partial class ItemTemplate {
-	//[Header("My Addon")]
-	//public int addonVariable = 0;
+    //[Header("My Addon")]
+    //public int addonVariable = 0;
 }
 
 // note: can't add variables yet without modifying original constructor
 public partial struct Item {
-	//public int addonVariable {
-	//    get { return template.addonVariable; }
-	//}
+    //public int addonVariable {
+    //    get { return template.addonVariable; }
+    //}
 
-	void ToolTip_Example(StringBuilder tip) {
-		//tip.Append("");
-	}
+    void ToolTip_Example(StringBuilder tip) {
+        //tip.Append("");
+    }
 }
 
 // skills //////////////////////////////////////////////////////////////////////
 public partial class SkillTemplate {
-	//[Header("My Addon")]
-	//public int addonVariable = 0;
+    //[Header("My Addon")]
+    //public int addonVariable = 0;
 
-	public partial struct SkillLevel {
-		// note: adding variables here will give lots of warnings, but it works.
-		//public int addonVariable;
-	}
+    public partial struct SkillLevel {
+        // note: adding variables here will give lots of warnings, but it works.
+        //public int addonVariable;
+    }
 }
 
 // note: can't add variables yet without modifying original constructor
 public partial struct Skill {
-	//public int addonVariable {
-	//    get { return template.addonVariable; }
-	//}
+    //public int addonVariable {
+    //    get { return template.addonVariable; }
+    //}
 
-	void ToolTip_Example(StringBuilder tip) {
-		//tip.Append("");
-	}
+    void ToolTip_Example(StringBuilder tip) {
+        //tip.Append("");
+    }
 }
 
 // quests //////////////////////////////////////////////////////////////////////
 public partial class QuestTemplate {
-	//[Header("My Addon")]
-	//public int addonVariable = 0;
+    //[Header("My Addon")]
+    //public int addonVariable = 0;
 }
 
 // note: can't add variables yet without modifying original constructor
 public partial struct Quest {
-	//public int addonVariable {
-	//    get { return template.addonVariable; }
-	//}
+    //public int addonVariable {
+    //    get { return template.addonVariable; }
+    //}
 
-	void ToolTip_Example(StringBuilder tip) {
-		//tip.Append("");
-	}
+    void ToolTip_Example(StringBuilder tip) {
+        //tip.Append("");
+    }
 }
 
 // database ////////////////////////////////////////////////////////////////////
 public partial class Database {
-	static void Initialize_Example() {
-		// it's usually best to create an extra table for your addon. example:
-		//ExecuteNonQuery(@"CREATE TABLE IF NOT EXISTS example (
-		//                  name TEXT NOT NULL PRIMARY KEY)");
-	}
-	static void CharacterLoad_Example(Player player) {}
-	static void CharacterSave_Example(Player player) {}
+    static void Initialize_Example() {
+        // it's usually best to create an extra table for your addon. example:
+        //ExecuteNonQuery(@"CREATE TABLE IF NOT EXISTS example (
+        //                  name TEXT NOT NULL PRIMARY KEY)");
+    }
+    static void CharacterLoad_Example(Player player) {}
+    static void CharacterSave_Example(Player player) {}
 }
 
 // networkmanager //////////////////////////////////////////////////////////////
 public partial class NetworkManagerMMO {
-	void Start_Example() {}
-	void OnStartServer_Example() {}
-	void OnStopServer_Example() {}
-	void OnClientConnect_Example(NetworkConnection conn) {}
-	void OnServerLogin_Example(LoginMsg message) {}
-	void OnClientCharactersAvailable_Example(CharactersAvailableMsg message) {}
-	void OnServerAddPlayer_Example(string account, GameObject player, NetworkConnection conn, CharacterSelectMsg message) {}
-	void OnServerCharacterCreate_Example(CharacterCreateMsg message, Player player) {}
-	void OnServerCharacterDelete_Example(CharacterDeleteMsg message) {}
-	void OnServerDisconnect_Example(NetworkConnection conn) {}
-	void OnClientDisconnect_Example(NetworkConnection conn) {}
+    void Start_Example() {}
+    void OnStartServer_Example() {}
+    void OnStopServer_Example() {}
+    void OnClientConnect_Example(NetworkConnection conn) {}
+    void OnServerLogin_Example(LoginMsg message) {}
+    void OnClientCharactersAvailable_Example(CharactersAvailableMsg message) {}
+    void OnServerAddPlayer_Example(string account, GameObject player, NetworkConnection conn, CharacterSelectMsg message) {}
+    void OnServerCharacterCreate_Example(CharacterCreateMsg message, Player player) {}
+    void OnServerCharacterDelete_Example(CharacterDeleteMsg message) {}
+    void OnServerDisconnect_Example(NetworkConnection conn) {}
+    void OnClientDisconnect_Example(NetworkConnection conn) {}
 }
 
+// network messages ////////////////////////////////////////////////////////////
+// all network messages can be extended
+public partial class LoginMsg {
+}
+
+// here is how to pass more data to the available message to show health, mana
+// etc. in the character selection UI if necessary
+public partial class CharactersAvailableMsg {
+    public partial struct CharacterPreview {
+        //public int health;
+    }
+    void Load_Example(List<Player> players) {
+        //for (int i = 0; i < players.Count; ++i)
+        //    characters[i].health = players[i].health;
+    }
+}
+
+// chat ////////////////////////////////////////////////////////////////////////
 public partial class Chat {
-	void OnStartLocalPlayer_Example() {}
-	void OnSubmit_Example(string text) {}
+    void OnStartLocalPlayer_Example() {}
+    void OnSubmit_Example(string text) {}
 }
 
 // user interface //////////////////////////////////////////////////////////////
 // all UI scripts are partial and provide Update hooks, so feel free to extend
 // them here as well! for example:
 public partial class UIChat {
-	void Update_Example() {}
+    void Update_Example() {}
 }
