@@ -1,18 +1,16 @@
 [submodule "AuHitRange"]
 	path = AuHitRange
-	url = https://github.com/uMMORPG/AuHitRange.git
+	url = https://github.com/AddonU/AuHitRange.git
+	branch = master
 [submodule "AuFlyCam"]
 	path = AuFlyCam
-	url = https://github.com/uMMORPG/AuFlyCam.git
+	url = https://github.com/AddonU/AuFlyCam.git
+	branch = master
 [submodule "AuCoords"]
 	path = AuCoords
-	url = https://github.com/uMMORPG/AuCoords.git
-[submodule "AuChatButtons"]
-	path = AuChatButtons
-	url = https://github.com/uMMORPG/AuChatButtons.git
+	url = https://github.com/AddonU/AuCoords.git
+	branch = master
 [submodule "AuXtraUI"]
 	path = AuXtraUI
-	url = https://github.com/uMMORPG/AuXtraUI.git
-[submodule "AuApiUI"]
-	path = AuApiUI
-	url = https://github.com/uMMORPG/AuHitRange.git
+	url = https://github.com/AddonU/AuXtraUI.git
+	branch = master
